@@ -41,7 +41,6 @@ body {
     margin-top: 8px;
     flex-wrap: wrap;
     justify-content: start;
-    overflow-X: scroll;
     padding: 2px;
 }
 
@@ -168,6 +167,7 @@ header > * {
 
     .nav {
         flex-wrap: nowrap;
+        overflow-X: scroll;
     }
 
     .sub-header__actions{
