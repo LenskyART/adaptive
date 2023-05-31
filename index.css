@@ -70,7 +70,7 @@ button {
     white-space: nowrap;
 }
 
-nav__btn:first-child {
+.nav__btn:first-child {
     margin-right: 16px;
 }
 
@@ -169,6 +169,7 @@ header > * {
     .nav {
         flex-wrap: nowrap;
         overflow-X: scroll;
+        overflow-Y: visible;
     }
 
     .sub-header__actions{
