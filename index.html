@@ -12,51 +12,49 @@
     <title>Block.1.3</title>
 </head>
 <body>
-    <header>
-        <div class="header__left">
-            <img class="header__btn" src="./img/burger.svg" alt="menu">
-            <div class="divider hidden320"></div>
-            <img class="header__logo" src="./img/Group.svg" alt="group">
+    <header class="header">
+        <div class="header__menu menu">
+            <img class="menu__button" src="./img/burger.svg" alt="menu">
+            <img class="menu__button logo" src="./img/Group.svg" alt="group">
         </div>
-        <div class="header__right">
-            <img class="header__btn hidden320" src="./img/call.svg" alt="call">
-            <img class="header__btn hidden320" src="./img/chat.svg" alt="chat">
-            <img class="header__btn hidden320" src="./img/profile.svg" alt="profile">
-            <div class="divider"></div>
-            <img class="header__btn" src="./img/repair.svg" alt="repair">
-            <img class="header__btn" src="./img/checkstatus.svg" alt="status">
+        <div class="header__actions action">
+            <img class="action__button sm" src="./img/call.svg" alt="call">
+            <img class="action__button sm" src="./img/chat.svg" alt="chat">
+            <img class="action__button sm" src="./img/profile.svg" alt="profile">
+            <img class="action__button" src="./img/repair.svg" alt="repair">
+            <img class="action__button" src="./img/checkstatus.svg" alt="status">
         </div>
     </header>
     <div class="sub-header">
         <div class="container">
-            <h1 class="sub-header__title">Услуги и сервисы</h1>
-            <div class="sub-header__actions">
-                <button type="button" class="sub-header__repair">
+            <h1 class="sub-header__title title">Услуги и сервисы</h1>
+            <div class="sub-header__action">
+                <button  type="button" class="sub-header__button">
                     Оставить заявку
                     <img src="./img/repair.svg" alt="repair">
                 </button>
-                <button type="button" class="sub-header__status">
+                <button type="button" class="sub-header__button">
                     Статус ремонта
                     <img src="./img/checkstatus.svg" alt="check-status">
                 </button>
             </div>
         </div>
         <nav class="nav">
-            <button type="button" class="nav__btn nav__btn_active">Ремонтируемые бренды</button>
-            <button type="button" class="nav__btn">Ремонтируемые устройства</button>
-            <button type="button" class="nav__btn">Цены на услуги</button>
-            <button type="button" class="nav__btn">Адреса сервисных центров</button>
-            <button type="button" class="nav__btn">Специальные цены</button>
-            <button type="button" class="nav__btn">Отзывы</button>
+            <button type="button" class="nav__button nav__button_active">Ремонтируемые бренды</button>
+            <button type="button" class="nav__button">Ремонтируемые устройства</button>
+            <button type="button" class="nav__button">Цены на услуги</button>
+            <button type="button" class="nav__button">Адреса сервисных центров</button>
+            <button type="button" class="nav__button">Специальные цены</button>
+            <button type="button" class="nav__button">Отзывы</button>
         </nav>
     </div>
-    <section>
-        <article>
+    <section class="section">
+        <article class="article">
             <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
             <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-            <button class="read-more" type="button"><img src="./img/expand.svg" alt="expand"> Читать дальше</button>
+            <button class="article__expand expand" type="button"><img src="./img/expand.svg" alt="expand"> Читать дальше</button>
         </article>
-        <img src="./img/_MG_3223.png" alt="CPS_LOGO">
+        <img class="image" src="./img/_MG_3223.png" alt="CPS_LOGO">
     </section>
 </body>
 </html>

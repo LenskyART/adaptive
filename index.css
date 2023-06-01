@@ -1,10 +1,10 @@
+@import "fonts/stylesheet.css";
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-family: 'TT Lakes', sans-serif;
 }
 
 body {
@@ -27,14 +27,16 @@ body {
 .sub-header__title {
     white-space: nowrap;
     flex: 1 auto;
-    min-height: 40px;
-    width: calc(266%/1120*100);
-    font-size: 40px;
+    line-height: 40px;
+    width: 233px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.sub-header__actions {
+.sub-header__action {
     flex: 0 auto;
     display: flex;
+    font-weight: 500;
 }
 
 .nav {
@@ -50,119 +52,130 @@ button {
     background: none;
 }
 
-.sub-header__repair, .sub-header__status{
+.sub-header__button {
     display: flex;
     align-items: center;
-    font-weight: 500;
+    font-size: 16px;
     height: 40px;
     margin-left: 32px;
-}
-
-.sub-header__status img, .sub-header__repair img {
-    margin-left: 9px;
-}
-
-.nav__btn {
-    color: #7E7E82;
-    padding: 8px 21px;
     font-weight: 500;
+}
+
+.sub-header__button img {
+    margin-left: 8px;
+}
+
+.nav__button {
+    color: #7E7E82;
+    padding: 8px 22px;
+    font-size: 16px;
     outline: none;
     white-space: nowrap;
 }
 
-.nav__btn:first-child {
-    margin-right: 16px;
-}
-
-.nav__btn:active {
+.nav__button:active {
     outline: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #fff;
 }
 
-.nav__btn_active {
+.nav__button_active {
     outline: 2px solid #B8FFEC;
     border-radius: 6px;
     background: #fff;
 }
 
-section {
-    padding: 0 calc(30%/1120*100);
-}
-
-section img {
+.image {
     width: 45%;
     height: 45%;
     border-radius: 10px;
-    margin-left: 30px;
+    margin: 0 calc(30%/1120*100);
 }
 
-article p {
-    font-weight: 400;
+.article {
+    margin-left: calc(40%/1120*100);
+}
+
+.article p {
+    font-size: 14px;
     color: #1B1C21;
-    margin-bottom: 16px;
-    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 20px;
+    font-weight: 400;
 
 }
 
-.read-more {
-    font-weight: 500;
+.expand {
+    font-size: 16px;
     color: #1B1C21;
     display: flex;
     white-space: nowrap;
     align-items: center;
 }
 
-.read-more img {
+.expand img {
     width: 24px;
     height: 24px;
     margin-right: 8px;
 }
 
-header {
+.header {
+    background: #fff;
     height: 88px;
-    padding: 20px;
     justify-content: space-between;
     border-bottom: 1px solid #D9FFF5;
     display: none;
 }
 
-header > * {
+.header > * {
     display: flex;
     justify-content: space-around;
 }
 
-
-.header__left {
-    width: 220px;
+.header__menu {
+    margin: 0 24px;
     display: flex;
     align-items: center;
+    justify-content: left;
+    gap: 20px;
 }
 
-.header__right {
-    width: 330px;
-    display: flex;
-    align-items: center;
-}
-
-.header__btn {
+.menu__button, .action__button {
     width: 40px;
     height: 40px;
 }
 
-.header__logo {
+.logo {
     width: 100px;
     height: 50px;
+    border-left: 2px solid #eaeaea;
+    box-sizing: content-box;
+    padding-left: 20px;
 }
 
-.divider {
-    height: 32px;
-    width: 2px;
-    background: #eaeaea;
+.header__actions {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+}
+
+.action__button {
+    margin: 0 16px;
+}
+
+.action__button:nth-child(4) {
+    border-left: 2px solid #eaeaea;
+    box-sizing: content-box;
+    padding-left: 20px;
+    margin-left: 4px;
+    /*margin-left: 4px;*/
+    /*padding-left: 20px;*/
+    /*width: 62px;*/
+    /*height: 62px;*/
 }
 
 @media (max-width: 1120px) {
-    header {
+    .header {
         display: flex;
     }
 
@@ -172,7 +185,7 @@ header > * {
         overflow-Y: visible;
     }
 
-    .sub-header__actions{
+    .sub-header__action{
       display: none;
     }
 
@@ -187,24 +200,47 @@ header > * {
         border-top-right-radius: 4px;
     }
 
-    p:nth-child(2) {
+    .article p:nth-child(2) {
         display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .hidden320 {
+    .sm {
         display: none;
     }
 
-    section {
+    .nav {
+        flex-wrap: nowrap;
+        overflow-X: scroll;
+        overflow-Y: visible;
+    }
+
+    .section {
         flex-direction: column;
     }
 
-    section img {
+    .logo {
+        box-sizing: border-box;
+        border-left: none;
+        padding-left: 0
+    }
+
+    .header__menu {
+        gap: 16px;
+    }
+
+    .action__button:nth-child(4) {
+        border-left: none;
+        box-sizing: border-box;
+        padding-left: 0;
+        margin: 0 16px;
+    }
+
+    .image {
         width: 100%;
         height: 100%;
-        margin: 16px 0;
+        margin: 16px 0 0 0;
         border-radius: 0;
     }
 
